@@ -1,0 +1,5 @@
+python==3.9.15
+conda==23.1.0
+pip==22.3.1
+streamlit==1.19.0
+pandas==1.5.2

@@ -1,0 +1,6 @@
+.DS_Store
+.env
+__pycache__/
+url.py
+.ipynb_checkpoints
+__init__.py
