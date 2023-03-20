@@ -34,3 +34,7 @@
 
 
 ## Credits
+
+I'd like to thanks to my teachers [Santino Lede](https://github.com/Luxor5k) and [Daniel Alvarado](https://github.com/DanielDls-exe) for support me in each step of this project.
+
+[Back to Top](#face-id-recognition)
