@@ -5,8 +5,8 @@ import streamlit as st
 st.set_page_config("Home", layout="centered")
 
 # Header
-st.title("Login Face ID Recognition :camera:")
-st.image('img/cover.png')
+st.title("Log in Face ID Recognition :camera:")
+# st.image('/core_finalproject/img/cover.png')
 
 # Body
-
+# st.camera_input("Take a picture of you")
