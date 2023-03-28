@@ -1,4 +1,5 @@
 import streamlit as st
+from ..data_manipulation.face_id_recognition import face_detector
 
 
 # Title
