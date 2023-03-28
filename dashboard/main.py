@@ -1,13 +1,16 @@
 import streamlit as st
-from ..data_manipulation.face_id_recognition import face_detector
-
+# from ..data_manipulation.face_id_recognition import face_detector
 
 # Title
 st.set_page_config("Home", layout="centered")
 
 # Header
-st.title("Log in Face ID Recognition :camera:")
-# st.image('/core_finalproject/img/cover.png')
+st.title("Welcome to Face Recognition :camera:")
+st.image('../img/cover.png')
 
 # Body
-# st.camera_input("Take a picture of you")
+st.text("To start with face recognition, clic the bottom down below!")
+
+if st.button("Start"):
+    url = "http://localhost:8501/recognition"
+    st.markdown(f'<meta http-equiv="refresh" content="0;URL=\'{url}\'" />', unsafe_allow_html=True)
