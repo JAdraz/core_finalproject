@@ -2,12 +2,12 @@ import face_recognition
 import cv2
 import numpy as np
 
-jesus_image_path = "./dataset/train/Jesus/IMG_3462.jpg"
-obama_image_path = "./dataset/train/Obama/Obama006.jpg"
-
-def face_detector(jesus_image_path, obama_image_path):
+def face_detector():
 
     video_capture = cv2.VideoCapture(0)
+
+    jesus_image_path = "./data/train/Jesus/IMG_3462.jpg"
+    obama_image_path = "./data/train/Obama/Obama006.jpg"
 
     # Load a sample picture and learn how to recognize it.
     jesus_image = face_recognition.load_image_file(jesus_image_path)
@@ -17,7 +17,7 @@ def face_detector(jesus_image_path, obama_image_path):
     obama_image = face_recognition.load_image_file(obama_image_path)
     obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
-    # Create arrays of known face encodings and their names
+    # Create list of known face encodings and their names
     known_face_encodings = [jesus_face_encoding, obama_face_encoding]
     known_face_names = ["Jesus Adraz", "Barak Obama"]
 
@@ -89,3 +89,5 @@ def face_detector(jesus_image_path, obama_image_path):
 
     # Release handle to the webcam
     return video_capture.release(), cv2.destroyAllWindows()
+
+face_detector()
