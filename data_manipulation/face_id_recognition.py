@@ -4,7 +4,7 @@ import numpy as np
 
 def face_detector():
 
-    video_capture = cv2.VideoCapture(0)
+    video_capture = cv2.VideoCapture(1)
 
     jesus_image_path = "./data/train/Jesus/IMG_3462.jpg"
     obama_image_path = "./data/train/Obama/Obama006.jpg"
