@@ -1,12 +1,12 @@
 import streamlit as st
-from data_manipulation import test
+from data_manipulation.test import cut_frame, face_training, transformarImagenes, mostrarResultados
 import cv2 
 
 # Title
 st.set_page_config("Recognition", layout="centered")
 
 # Header
-st.title("Are you Jesus or Obama :male-detective:")
+st.title("Are you Jesus or Obama? :male-detective:")
 
 # Body
 with st.container():
@@ -17,26 +17,26 @@ with st.container():
         url = "http://localhost:8501/"
         st.markdown(f'<meta http-equiv="refresh" content="0;URL=\'{url}\'" />', unsafe_allow_html=True)
 
-a = test.cut_frame()
 
+cap = cv2.VideoCapture(1)
 if var1:
     # Start camera
     FRAME_WINDOW = st.image([])
-    cap = cv2.VideoCapture(0)
+    # cap = cv2.VideoCapture(1)
     n = 5*24
     st.write("Verifying in 5 seconds.")
     st.write("Please place yourself in front of the camera.")
     while n > 0:
         ret, raw_frame = cap.read()
-        video_capture = a(raw_frame)                
+        video_capture = cut_frame(raw_frame)
+        known_face_encodings, known_face_names = face_training()
+        face_locations, face_encodings, face_names, frame = transformarImagenes(video_capture,known_face_encodings, known_face_names)
         FRAME_WINDOW.image(video_capture)
         n -= 1
          # if n%24 == 0:
          #     st.write(n/24+1)
         # Release the webcam
-    cap.release()
+    # cap.release()
     cv2.destroyAllWindows()
 
-known_face_encodings, known_face_names = test.face_training()
-face_locations, face_encodings, face_names, frame = test.transformarImagenes()
-var2 = test.mostrarResultados()
+var2 = mostrarResultados(face_locations, face_names, frame)

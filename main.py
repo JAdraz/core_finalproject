@@ -6,7 +6,7 @@ st.set_page_config("Home", layout="centered")
 
 # Header
 st.title("Welcome to Face Recognition :camera:")
-st.image('../img/cover.png')
+st.image('./img/cover.png')
 
 # Body
 st.text("To start with face recognition, clic the bottom down below!")
