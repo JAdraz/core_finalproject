@@ -1,5 +1,4 @@
 import streamlit as st
-# from data_manipulation.test import cut_frame, face_training, transformarImagenes, mostrarResultados
 import cv2
 import face_recognition
 
@@ -19,7 +18,7 @@ with st.container():
         url = "http://localhost:8501/"
         st.markdown(f'<meta http-equiv="refresh" content="0;URL=\'{url}\'" />', unsafe_allow_html=True)
 
-
+# Image path
 jesus_image_path = "../data/train/Jesus/IMG_3462.jpg"
 obama_image_path = "../data/train/Obama/Obama006.jpg"
 
@@ -49,28 +48,24 @@ while var1:
     if process_this_frame:
         # Resize frame of video to 1/4 size for faster face recognition processing
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
-
-        # Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
-        # rgb_small_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
     
         # Find all the faces and face encodings in the current frame of video
         face_locations = face_recognition.face_locations(small_frame)
         face_encodings = face_recognition.face_encodings(small_frame, face_locations)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         face_names = []
+
         for face_encoding in face_encodings:
             # See if the face is a match for the known face(s)
             matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
             name = "Unknown"
 
-            # # If a match was found in known_face_encodings, just use the first one.
+            # If a match was found in known_face_encodings, just use the first one.
             if True in matches:
                 first_match_index = matches.index(True)
                 name = known_face_names[first_match_index]
         
             face_names.append(name)
-
-        # process_this_frame = not process_this_frame
 
         # Display the results
         for (top, right, bottom, left), name in zip(face_locations, face_names):
@@ -89,13 +84,6 @@ while var1:
             # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             result = cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
-        # Display the resulting image
-        # cv2.imshow('Video', frame)
-      
-        # Hit 'q' on the keyboard to quit!
-        # if cv2.waitKey(1) & 0xFF == ord('q'):
-        #    break
-
-        FRAME_WINDOW.image(result)
+            FRAME_WINDOW.image(result)
 camera.release()
 cv2.destroyAllWindows()
