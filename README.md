@@ -9,17 +9,21 @@
 
 - [Introduction](#Introduction)
 - [Database](#Database)
-- [Dashboard](#Dashboard)
 - [How To Use It](#How-To-Use-It)
+- [Dashboard](#Dashboard)
 - [Credits](#Credits)
 
 ## Introduction
 
 This is my Bootcamp Final Project where I created a dashboard about face recognition 📹. It is my second real project since I jumped into data analytics field. You are going to find how I did it. I hope you like it 🤟
 
+[Back to Top](#face-recognition)
+
 ## Database
 
 I used this database from Kaggle to get Obama images [Object Detection - Obama](https://www.kaggle.com/datasets/jipingsun/object-detection-obama). On the other hand, I took 45 photos of myself. However, I only used a photo of me and obama for the model and it worked fine.
+
+[Back to Top](#face-recognition)
 
 ## How To Use It
 
@@ -75,11 +79,13 @@ obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 known_face_encodings = [jesus_face_encoding, obama_face_encoding]
 known_face_names = ["Jesus Adraz", "Barak Obama"]
 ```
+[Back to Top](#face-recognition)
 
 ## Dashboard
 
-When you run streamlit, this is the main page
+When you run streamlit, this is the main page:
 
+![image0](/img/image0.png)
 
 Then, you need to clic the "Start" buttom to go to recognition page.
 
@@ -95,6 +101,8 @@ If you show the second known face name, Obama in this case, it will look like th
 Finally, if you show an unknown face, it will look like this:
 
 ![image3](/img/image3.png)
+
+[Back to Top](#face-recognition)
 
 ## Credits
 
