@@ -1,7 +1,6 @@
 python==3.9.15
 conda==23.1.0
-streamlit==1.16.0
+streamlit==1.20.0
 opencv-python==4.7.0.72
-matplotlib==3.7.1
+matplotlib==3.5.0
 pip==23.0.1
-numpy==1.23.5
