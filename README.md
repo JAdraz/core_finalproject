@@ -15,7 +15,7 @@
 
 ## Introduction
 
-This is my Bootcamp Final Project where I created a dashboard about face recognition 📹. It is my second real project since I jumped into data analytics field. You are going to find how I did it. I hope you like it 🤟
+This is my Bootcamp Final Project where I created a face recognition dashboard 📹. It is my second real project since I jumped into data analytics field. You are going to find how I did it. I hope you like it 🤟
 
 [Back to Table of Content](#table-of-content)
 
@@ -52,7 +52,7 @@ Finally, install this module from pypi using `pip3` (or `pip2` for Python 2):
 pip3 install face_recognition
 ```
 
-Then, you have to run streamlit. To do that you need to access dashboard folder and write this code in your terminal
+Then, you have to run streamlit. To do that, you need to access to dashboard folder and write this code in your terminal:
 
 ```bash
 streamlit run main.py
@@ -60,7 +60,7 @@ streamlit run main.py
 
 Follow the instructions to start face recognition. Remember, the model is only able to recognize Obama's face and my face. If you try showing your face, the model is not going to recognize you and show "Unknow".
 
-If you want the model recognize your face, please add an image of you in data folder. Then, open recognition.py and change this code according to what you need.
+If you want the model recognize your face, please add an image of you in dataset folder. Then, open recognition.py and change this code according to what you need.
 
 ```python
 # Image path
