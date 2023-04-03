@@ -19,8 +19,8 @@ with st.container():
         st.markdown(f'<meta http-equiv="refresh" content="0;URL=\'{url}\'" />', unsafe_allow_html=True)
 
 # Image path
-jesus_image_path = "../data/train/Jesus/IMG_3462.jpg"
-obama_image_path = "../data/train/Obama/Obama006.jpg"
+jesus_image_path = "../dataset/train/Jesus/IMG_3462.jpg"
+obama_image_path = "../dataset/train/Obama/Obama006.jpg"
 
 # Load a sample picture and learn how to recognize it.
 jesus_image = face_recognition.load_image_file(jesus_image_path)
