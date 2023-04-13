@@ -109,3 +109,17 @@ Finally, if you show an unknown face, it will look like this:
 I would like to thanks to my teachers [Santino Lede](https://github.com/Luxor5k) and [Daniel Alvarado](https://github.com/DanielDls-exe) for support me in each step of this project. Also, I want to thank you to [Adam Geitgey](https://github.com/ageitgey) for his face recognition library. You can check his repo for more info doing [clic here](https://github.com/ageitgey/face_recognition).
 
 [Back to Top](#face-recognition)
+
+## Hi 👋 I'm Jesús Adraz!
+
+### **Junior Data Engineer**
+
+I am a Junior Data Engineer passionate about analyzing data, creating dashboards and data driven cultures.
+
+### You can support my work clicking "☆ Star" on this repo or nominate to "GitHub Star". Thank you!
+
+[![GitHub Star](https://img.shields.io/badge/GitHub-Nominate_to_star-yellow?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://stars.github.com/nominate/)
+
+### Check my GitHub Profile to know more about me
+
+[![Web](https://img.shields.io/badge/GitHub-JAdraz-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/JAdraz)
