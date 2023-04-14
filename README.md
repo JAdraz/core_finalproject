@@ -17,6 +17,8 @@
 
 This is my Bootcamp Final Project where I created a face recognition dashboard 📹. It is my second real project since I jumped into data analytics field. You are going to find how I did it. I hope you like it 🤟
 
+PD: If you want to watch my presentation, [check out this project on YouTube](https://www.youtube.com/watch?v=8155Xvx6MGU). It was explained in my mother tounge (Spanish).
+
 [Back to Table of Content](#table-of-content)
 
 ## Dataset
